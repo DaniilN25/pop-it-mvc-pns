@@ -22,7 +22,19 @@ class Site
 
     public function hello(): string
     {
-        return new View('site.hello', ['message' => 'hello working']);
+        return new View('site.hello', ['message' => 'Главная страница']);
+    }
+public function workers(): string
+{
+    return new View('site.workers', ['message' => 'Список работников']);
+}
+    public function divisions(): string
+    {
+        return new View('site.divisions', ['message' => 'TEXT']);
+    }
+    public function room(): string
+    {
+        return new View('site.room', ['message' => 'TEXT']);
     }
 
     public function signup(Request $request): string
