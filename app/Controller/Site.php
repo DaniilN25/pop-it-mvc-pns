@@ -19,10 +19,9 @@ class Site
         return (new View())->render('site.post', ['posts' => $posts]);
     }
 
-
     public function hello(): string
     {
-        return new View('site.hello', ['message' => 'Главная страница']);
+        return new View('site.hello', ['message' => '']);
     }
 public function workers(): string
 {
@@ -35,6 +34,11 @@ public function workers(): string
     public function room(): string
     {
         return new View('site.room', ['message' => 'TEXT']);
+    }
+
+    public function chairs(): string
+    {
+        return new View('site.chairs', ['message' => 'TEXT']);
     }
 
     public function signup(Request $request): string
