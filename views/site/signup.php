@@ -1,9 +1,10 @@
-
+<div class="register">
 <h3><?= $message ?? ''; ?></h3>
 <form method="post">
     <h2>Регистрация</h2>
-    <label>Имя <input type="text" name="name"></label>
-    <label>Логин <input type="text" name="login"></label>
-    <label>Пароль <input type="password" name="password"></label>
+    <label> <input type="text" name="name" placeholder="Имя"></label>
+    <label> <input type="text" name="login" placeholder="Логин"></label>
+    <label> <input type="password" name="password" placeholder="Пароль"></label>
     <button>Зарегистрироваться</button>
 </form>
+</div>
