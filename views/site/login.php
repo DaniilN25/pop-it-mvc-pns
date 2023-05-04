@@ -1,4 +1,4 @@
-<h2>Авторизация</h2>
+<div class="login">
 <h3><?= $message ?? ''; ?></h3>
 
 <h3><?= app()->auth->user()->name ?? ''; ?></h3>
@@ -6,8 +6,10 @@
 if (!app()->auth::check()):
     ?>
     <form method="post">
-        <label>Логин <input type="text" name="login"></label>
-        <label>Пароль <input type="password" name="password"></label>
+        <h2>Авторизация</h2>
+        <label> <input type="text" name="login" placeholder="Логин"></label>
+        <label> <input type="password" name="password" placeholder="Пароль"></label>
         <button>Войти</button>
     </form>
+</div>
 <?php endif;

@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color:white;
+    background-color:#C3BBBB;
 }
 
 .workers{
@@ -14,4 +14,77 @@ td{
     border: 1px solid black;
 }
 
+header > nav{
+    background-color: blanchedalmond;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+header > nav > a{
+    padding: 10px 10px 10px 10px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+header > nav > a:hover{
+    color: red;
+}
+
+header > nav > img{
+    width: 100px;
+    height: 100px;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login > form{
+    display: flex;
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+.login > form > label {
+    padding-bottom: 10px;
+}
+
+.login > form > button {
+
+}
+
+.login > form > label > input{
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.login > form > button{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.login > form > button:hover{
+    color: red;
+}
+
+.login > form > h2{
+}

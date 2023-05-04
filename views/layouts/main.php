@@ -11,6 +11,7 @@
 <body>
 <header>
     <nav>
+        <img src="/pop-it-mvc/public/img/workes.jpg" alt>
         <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
         <a href="<?= app()->route->getUrl('/workers') ?>">Сотрудники</a>
         <a href="<?= app()->route->getUrl('/divisions') ?>">Подразделения</a>
