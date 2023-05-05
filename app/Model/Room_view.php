@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class divisions_view extends Model
+class room_view extends Model
 {
     use HasFactory;
 
     public $timestamps = false;
     protected $fillable = [
-        'division_view_id',
-        'name'
+        'name',
+        'room_view_id'
     ];
 
-    protected $table = 'divisions_view';
+    protected $table = 'room_view';
 }

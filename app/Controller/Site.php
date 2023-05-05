@@ -7,6 +7,7 @@ use Src\View;
 use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
+use Model\Workers;
 
 
 
@@ -23,10 +24,11 @@ class Site
     {
         return new View('site.hello', ['message' => '']);
     }
-public function workers(): string
-{
-    return new View('site.workers', ['message' => 'Список работников']);
-}
+    public function workers(): string
+    {
+        $workers = Workers::all();
+    return new View('site.workers',['workers' => $workers]);
+    }
     public function divisions(): string
     {
         return new View('site.divisions', ['message' => 'TEXT']);
@@ -66,6 +68,14 @@ public function workers(): string
     {
         Auth::logout();
         app()->route->redirect('/hello');
+    }
+
+    public function add_workers(Request $request): string
+    {
+        if ($request->method === 'POST' && Workers::create($request->all())) {
+            app()->route->redirect('/workers');
+        }
+        return new View('site.add_workers');
     }
 
 }

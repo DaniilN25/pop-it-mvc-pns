@@ -15,3 +15,5 @@ Route::add(['GET', 'POST'], '/room', [Controller\Site::class, 'room'])
     ->middleware('auth');
 Route::add('GET', '/chairs', [Controller\Site::class, 'chairs'])
     ->middleware('auth');
+Route::add(['GET', 'POST' ], '/add_workers', [Controller\Site::class, 'add_workers'])
+    ->middleware('auth');

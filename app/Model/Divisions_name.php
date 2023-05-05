@@ -12,8 +12,8 @@ class divisions_name extends Model
 
     public $timestamps = false;
     protected $fillable = [
-        'name',
-        'view'
+        'division_id',
+        'division_view_id'
     ];
 
     protected $table = 'divisions_name';

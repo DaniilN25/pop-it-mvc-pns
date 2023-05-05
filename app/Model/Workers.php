@@ -14,10 +14,9 @@ class workers extends Model
     protected $fillable = [
         'id',
         'name',
-        "date_of_birth",
-        'divisions_view',
-        'divisions_name',
-        'room_view'
+        'birthday',
+        'divisions_id',
+        'room_id'
     ];
 
     protected $table = 'workers';
