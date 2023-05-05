@@ -31,17 +31,30 @@ class Site
     }
     public function divisions(): string
     {
-        return new View('site.divisions', ['message' => 'TEXT']);
+        return new View('site.divisions', ['message' => '']);
     }
     public function room(): string
     {
-        return new View('site.room', ['message' => 'TEXT']);
+        return new View('site.room', ['message' => '']);
     }
 
     public function chairs(): string
     {
-        return new View('site.chairs', ['message' => 'TEXT']);
+        return new View('site.chairs', ['message' => '']);
     }
+    public function chairs_mat(): string
+    {
+        return new View('site.chairs_mat', ['message' => '']);
+    }
+    public function chairs_tex(): string
+    {
+        return new View('site.chairs_tex', ['message' => '']);
+    }
+
+//    public function add_workers(): string
+//    {
+//     return new View('site.add_workers', ['message' => 'TEXT']);
+//    }
 
     public function signup(Request $request): string
     {

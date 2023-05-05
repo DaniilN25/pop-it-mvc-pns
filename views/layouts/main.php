@@ -14,13 +14,14 @@
         <img src="/pop-it-mvc/public/img/workes.jpg" alt>
         <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
         <a href="<?= app()->route->getUrl('/workers') ?>">Сотрудники</a>
+        <a href="<?= app()->route->getUrl('/add_workers') ?>">Добавить сотрудника</a>
         <a href="<?= app()->route->getUrl('/divisions') ?>">Подразделения</a>
         <a href="<?= app()->route->getUrl('/room') ?>">Помещение</a>
         <?php
         if (!app()->auth::check()):
             ?>
             <a href="<?= app()->route->getUrl('/login') ?>">Вход</a>
-            <a href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
+<!--            <a href="--><?php //= app()->route->getUrl('/signup') ?><!--">Регистрация</a>-->
         <?php
         else:
             ?>
@@ -34,7 +35,12 @@
     <?= $content ?? '' ?>
 </main>
 <footer>
-
+<!--    <nav class="podval">-->
+<!--        <a href="--><?php //= app()->route->getUrl('/hello') ?><!--">Главная</a>-->
+<!--        <a href="--><?php //= app()->route->getUrl('/workers') ?><!--">Сотрудники</a>-->
+<!--        <a href="--><?php //= app()->route->getUrl('/divisions') ?><!--">Подразделения</a>-->
+<!--        <a href="--><?php //= app()->route->getUrl('/room') ?><!--">Помещение</a>-->
+<!--    </nav>-->
 </footer>
 
 </body>

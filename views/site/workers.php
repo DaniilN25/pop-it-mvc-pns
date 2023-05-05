@@ -94,8 +94,12 @@
     <?php
     foreach ($workers as $worker){
         echo '<div class="workers">';
+        echo '<p class="p">Id:' . $worker->id. '</p>';
         echo '<p class="p">Name:' . $worker->name. '</p>';
         echo '<p class="p">Birthday:' . $worker->birthday. '</p>';
+        echo '<p class="p">Division_id:' . $worker->division_id. '</p>';
+        echo '<p class="p">Room_id:' . $worker->room_id. '</p>';
+        echo '<button>Удалить</button>';
         echo '</div>';
     }
     ?>
