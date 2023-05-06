@@ -8,6 +8,7 @@ use Src\Request;
 use Model\User;
 use Src\Auth\Auth;
 use Model\Workers;
+use Model\Room;
 
 
 
@@ -29,14 +30,19 @@ class Site
         $workers = Workers::all();
     return new View('site.workers',['workers' => $workers]);
     }
+    public function room(): string
+    {
+        $room = Room::all();
+        return new View('site.room',['room' => $room]);
+    }
     public function divisions(): string
     {
         return new View('site.divisions', ['message' => '']);
     }
-    public function room(): string
-    {
-        return new View('site.room', ['message' => '']);
-    }
+//    public function room(): string
+//    {
+//        return new View('site.room', ['message' => '']);
+//    }
 
     public function chairs(): string
     {
@@ -90,5 +96,16 @@ class Site
         }
         return new View('site.add_workers');
     }
+    public function add_room(Request $request): string
+    {
+        if ($request->method === 'POST' && Room::create($request->all())) {
+            app()->route->redirect('/Room');
+        }
+        return new View('site.add_room');
+    }
 
 }
+
+
+
+

@@ -16,12 +16,14 @@
         <a href="<?= app()->route->getUrl('/workers') ?>">Сотрудники</a>
         <a href="<?= app()->route->getUrl('/add_workers') ?>">Добавить сотрудника</a>
         <a href="<?= app()->route->getUrl('/divisions') ?>">Подразделения</a>
+        <a href="<?= app()->route->getUrl('/') ?>">Добавить подразделения</a>
         <a href="<?= app()->route->getUrl('/room') ?>">Помещение</a>
+        <a href="<?= app()->route->getUrl('/add_room') ?>">Добавить помещение</a>
         <?php
         if (!app()->auth::check()):
             ?>
             <a href="<?= app()->route->getUrl('/login') ?>">Вход</a>
-<!--            <a href="--><?php //= app()->route->getUrl('/signup') ?><!--">Регистрация</a>-->
+<!--       //  <a href="--><?php //= app()->route->getUrl('/signup') ?><!--">Регистрация</a>//-->
         <?php
         else:
             ?>
