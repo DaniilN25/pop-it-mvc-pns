@@ -9,6 +9,7 @@ use Model\User;
 use Src\Auth\Auth;
 use Model\Workers;
 use Model\Room;
+use Model\Divisions_view;
 
 
 
@@ -35,15 +36,11 @@ class Site
         $room = Room::all();
         return new View('site.room',['room' => $room]);
     }
-    public function divisions(): string
+    public function divisions_view(): string
     {
-        return new View('site.divisions', ['message' => '']);
+        $divisions_view = Divisions_view::all();
+        return new View('site.divisions_view',['divisions_view' => $divisions_view]);
     }
-//    public function room(): string
-//    {
-//        return new View('site.room', ['message' => '']);
-//    }
-
     public function chairs(): string
     {
         return new View('site.chairs', ['message' => '']);
@@ -56,12 +53,6 @@ class Site
     {
         return new View('site.chairs_tex', ['message' => '']);
     }
-
-//    public function add_workers(): string
-//    {
-//     return new View('site.add_workers', ['message' => 'TEXT']);
-//    }
-
     public function signup(Request $request): string
     {
         if ($request->method === 'POST' && User::create($request->all())) {
@@ -99,9 +90,16 @@ class Site
     public function add_room(Request $request): string
     {
         if ($request->method === 'POST' && Room::create($request->all())) {
-            app()->route->redirect('/Room');
+            app()->route->redirect('/room');
         }
         return new View('site.add_room');
+    }
+    public function add_division(Request $request): string
+    {
+        if ($request->method === 'POST' && Divisions_view::create($request->all())) {
+            app()->route->redirect('/divisions_view');
+        }
+        return new View('site.add_division');
     }
 
 }

@@ -1,12 +1,6 @@
 <form method="post">
     <div class="new_employee">
-        <input type="text" name="text" placeholder="">
-        <input type="date" name="name" placeholder="">
-        <input type="text" name="text" placeholder="">
-        <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
+        <input type="text" name="name" placeholder="Название подразделения">
         <button>Добавить</button>
     </div>
 </form>
