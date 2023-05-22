@@ -1,12 +1,16 @@
 <form method="post">
-    <div class="new_employee">
-        <input type="text" name="text" placeholder="">
-        <input type="text" name="name" placeholder="">
-        <input type="text" name="text" placeholder="">
-        <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
+    <div class="new_room">
+        <input type="text" name="roomname" placeholder="Название помещения">
+        <input type="text" name="square" placeholder="Площадь">
+        <label>Тип помещения
+            <select name="roomviewid">
+                <?php
+                foreach ($roomView as $roomVie){
+                    echo "<option value=\"$roomVie->roomviewid\">" . $roomVie->name . '</option>';
+                    }
+                ?>
+            </select>
+        </label>
         <button>Добавить</button>
     </div>
 </form>

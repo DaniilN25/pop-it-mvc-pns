@@ -25,4 +25,5 @@ Route::add('GET', '/chairs_mat', [Controller\Site::class, 'chairs_mat'])
     ->middleware('auth');
 Route::add('GET', '/chairs_tex', [Controller\Site::class, 'chairs_tex'])
     ->middleware('auth');
-
+Route::add(['GET', 'POST', 'admin'], '/add_division_name', [Controller\Site::class, 'add_division_name'])
+    ->middleware('auth');

@@ -17,6 +17,7 @@
         <a href="<?= app()->route->getUrl('/add_workers') ?>">Добавить сотрудника</a>
         <a href="<?= app()->route->getUrl('/divisions_view') ?>">Подразделения</a>
         <a href="<?= app()->route->getUrl('/add_division') ?>">Добавить подразделения</a>
+        <a href="<?= app()->route->getUrl('/add_division_name') ?>">Добавить подразделения ( name )</a>
         <a href="<?= app()->route->getUrl('/room') ?>">Помещение</a>
         <a href="<?= app()->route->getUrl('/add_room') ?>">Добавить помещение</a>
         <?php

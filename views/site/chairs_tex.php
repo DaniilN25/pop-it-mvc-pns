@@ -1,5 +1,5 @@
 <div class="nazad">
-    <a href="<?= app()->route->getUrl('/divisions') ?>"><button>НАЗАД</button></a>
+    <a href="<?= app()->route->getUrl('/divisions_view') ?>"><button>НАЗАД</button></a>
 <div class="chair-ek">
     <h2>Кафедра физики </h2>
     <h3><?= $message ?? ''; ?></h3>

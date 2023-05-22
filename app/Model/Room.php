@@ -12,10 +12,10 @@ class room extends Model
 
     public $timestamps = false;
     protected $fillable = [
-        'room_id',
-        'room_name',
+        'roomid',
+        'roomname',
         'square',
-        'room_view_id'
+        'roomviewid'
     ];
 
     protected $table = 'room';

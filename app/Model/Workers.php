@@ -15,7 +15,7 @@ class workers extends Model
         'id',
         'name',
         'birthday',
-        'divisions_id',
+        'division_id',
         'room_id'
     ];
 

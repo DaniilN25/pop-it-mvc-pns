@@ -38,7 +38,7 @@ header > nav > a{
     text-transform: uppercase;
     background-color: peachpuff;
     color: black;
-    font-size: 14px;
+    font-size: 12px;
     border: 1px solid black;
     border-radius: 10px;
     text-decoration: none;
@@ -151,42 +151,42 @@ header > nav > img{
     font-size: 18px;
 }
 
-.search > form > img{;
-    width: 30px;
-    height: 30px;
-}
+/*.search > form > img{;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*}*/
 
-.search{
-    display: flex;
-    justify-content: center;
-    width: 350px;
-    height: 50px;
-    border-radius: 10px;
-    margin-left: 670px;
-    margin-bottom: 30px;
-}
+/*.search{*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    width: 350px;*/
+/*    height: 50px;*/
+/*    border-radius: 10px;*/
+/*    margin-left: 670px;*/
+/*    margin-bottom: 30px;*/
+/*}*/
 
-.search > form{
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-}
+/*.search > form{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    margin-top: 30px;*/
+/*}*/
 
-.search > form > button{
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-}
+/*.search > form > button{*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*    border-radius: 10px;*/
+/*}*/
 
-.search > form > input{
-    width: 200px;
-    height: 30px;
-    border-radius: 10px;
-}
+/*.search > form > input{*/
+/*    width: 200px;*/
+/*    height: 30px;*/
+/*    border-radius: 10px;*/
+/*}*/
 
-.search > form > button:hover{
-    background-color: blanchedalmond;
-}
+/*.search > form > button:hover{*/
+/*    background-color: blanchedalmond;*/
+/*}*/
 
 
 .new_employee{
@@ -194,6 +194,25 @@ header > nav > img{
     flex-direction: column;
     align-items: center;
 }
+
+.new_division_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new_division_view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new_room{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .new_employee > form {
     display: flex;
     align-items: center;
@@ -366,4 +385,24 @@ header > nav > img{
 
 .nazad > a > button:hover{
     background-color: blanchedalmond;
+}
+
+.poisk > img{
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    padding: 12px 20px 12px 40px;
+}
+
+.poisk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poisk > input{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
 }

@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\Post;
+use Model\roomview;
 use Src\View;
 use Src\Request;
 use Model\User;
@@ -10,6 +11,7 @@ use Src\Auth\Auth;
 use Model\Workers;
 use Model\Room;
 use Model\Divisions_view;
+use Model\Divisions_name;
 
 
 
@@ -89,10 +91,12 @@ class Site
     }
     public function add_room(Request $request): string
     {
+        $roomView = roomview::all();
         if ($request->method === 'POST' && Room::create($request->all())) {
             app()->route->redirect('/room');
         }
-        return new View('site.add_room');
+
+        return new View('site.add_room', ['roomView' => $roomView]);
     }
     public function add_division(Request $request): string
     {
@@ -100,6 +104,13 @@ class Site
             app()->route->redirect('/divisions_view');
         }
         return new View('site.add_division');
+    }
+    public function add_division_name(Request $request): string
+    {
+        if ($request->method === 'POST' && Divisions_name::create($request->all())) {
+            app()->route->redirect('/divisions_name');
+        }
+        return new View('site.add_division_name');
     }
 
 }
