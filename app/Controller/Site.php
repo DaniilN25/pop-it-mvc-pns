@@ -3,7 +3,7 @@
 namespace Controller;
 
 use Model\Post;
-use Model\roomview;
+use Model\room_view;
 use Src\View;
 use Src\Request;
 use Model\User;
@@ -43,6 +43,11 @@ class Site
         $divisions_view = Divisions_view::all();
         return new View('site.divisions_view',['divisions_view' => $divisions_view]);
     }
+    public function divisions_name(): string
+    {
+        $divisions_name = Divisions_name::all();
+        return new View('site.divisions_name',['divisions_name' => $divisions_name]);
+    }
     public function chairs(): string
     {
         return new View('site.chairs', ['message' => '']);
@@ -67,13 +72,13 @@ class Site
         //Если просто обращение к странице, то отобразить форму
         if ($request->method === 'GET') {
             return new View('site.login');
-        }
-        //Если удалось аутентифицировать пользователя, то редирект
-        if (Auth::attempt($request->all())) {
+        } //Если удалось аутентифицировать пользователя, то редирект
+        else if (Auth::attempt($request->all())) {
             app()->route->redirect('/hello');
+        } else {
+            //Если аутентификация не удалась, то сообщение об ошибке
+            return new View('site.login', ['message' => 'Неправильные логин или пароль']);
         }
-        //Если аутентификация не удалась, то сообщение об ошибке
-        return new View('site.login', ['message' => 'Неправильные логин или пароль']);
     }
 
     public function logout(): void
@@ -91,7 +96,7 @@ class Site
     }
     public function add_room(Request $request): string
     {
-        $roomView = roomview::all();
+        $roomView = room_view::all();
         if ($request->method === 'POST' && Room::create($request->all())) {
             app()->route->redirect('/room');
         }

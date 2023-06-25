@@ -11,27 +11,26 @@
 <body>
 <header>
     <nav>
-        <img src="/pop-it-mvc/public/img/workes.jpg" alt>
-        <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
-        <a href="<?= app()->route->getUrl('/workers') ?>">Сотрудники</a>
-        <a href="<?= app()->route->getUrl('/add_workers') ?>">Добавить сотрудника</a>
-        <a href="<?= app()->route->getUrl('/divisions_view') ?>">Подразделения</a>
-        <a href="<?= app()->route->getUrl('/add_division') ?>">Добавить подразделения</a>
-        <a href="<?= app()->route->getUrl('/add_division_name') ?>">Добавить подразделения ( name )</a>
-        <a href="<?= app()->route->getUrl('/room') ?>">Помещение</a>
-        <a href="<?= app()->route->getUrl('/add_room') ?>">Добавить помещение</a>
         <?php
         if (!app()->auth::check()):
             ?>
             <a href="<?= app()->route->getUrl('/login') ?>">Вход</a>
-<!--       //  <a href="--><?php //= app()->route->getUrl('/signup') ?><!--">Регистрация</a>//-->
+            <a href="<?= app()->route->getUrl('/signup') ?>">Регистрация</a>
         <?php
-        else:
+        elseif (app()->auth::check() && app()->auth::user()->isAdmin()):
             ?>
-            <a href="<?= app()->route->getUrl('/logout') ?>">Выход (<?= app()->auth::user()->name ?>)</a>
+            <a>Вы зашли под пользователем: <b>(<?= app()->auth::user()->name ?>)</b></a>
+            <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
+            <a href="<?= app()->route->getUrl('/workers') ?>">Сотрудники</a>
+            <a href="<?= app()->route->getUrl('/add_workers') ?>">Добавить сотрудника</a>
+            <a href="<?= app()->route->getUrl('/divisions_view') ?>">Подразделения</a>
+            <a href="<?= app()->route->getUrl('/add_division') ?>">Добавить подразделения</a>
+            <a href="<?= app()->route->getUrl('/room') ?>">Помещение</a>
+            <a href="<?= app()->route->getUrl('/add_room') ?>">Добавить помещение</a>
         <?php
         endif;
         ?>
+        <a class="leave" href="<?= app()->route->getUrl('/logout') ?>">Выход </a>
     </nav>
 </header>
 <main>

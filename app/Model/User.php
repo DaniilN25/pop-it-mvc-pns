@@ -15,6 +15,7 @@ class User extends Model implements IdentityInterface
         'name',
         'login',
         'password',
+        'prof',
     ];
 
     protected static function booted()
@@ -45,7 +46,7 @@ class User extends Model implements IdentityInterface
     }
     public function isAdmin()
     {
-        if ($this-> admin == 1) {
+        if ($this-> admin === 1) {
             return true;
         }
         return false;

@@ -3,7 +3,7 @@
 <!--<h3>--><?php //= $message ?? ''; ?><!--</h3>-->
 <!--  <div class="work">-->
 <!--<table>-->
-<!--    <tr>-->
+<!--    -->
 <!--        <td>Id</td>-->
 <!--        <td>Имя</td>-->
 <!--        <td>Дата рождения</td>-->
@@ -94,11 +94,11 @@
     <?php
     foreach ($workers as $worker){
         echo '<div class="workers">';
-        echo '<p class="p">Id:' . $worker->id. '</p>';
+        // echo '<p class="p">Id:' . $worker->id. '</p>';
         echo '<p class="p">ФИО:' . $worker->name. '</p>';
         echo '<p class="p">Дата рождения:' . $worker->birthday. '</p>';
-        echo '<p class="p">ID подразделения:' . $worker->division_id. '</p>';
-        echo '<p class="p">ID помещения:' . $worker->room_id. '</p>';
+       // echo '<p class="p">ID подразделения:' . $worker->division_id. '</p>';
+       // echo '<p class="p">ID помещения:' . $worker->roomID. '</p>';
         echo '<button>Удалить</button>';
         echo '</div>';
     }

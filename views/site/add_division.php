@@ -1,14 +1,6 @@
 <form method="post">
     <div class="new_division_view">
-        <label>Название подразделения
-        <select>
-            <?php
-            foreach ($divisionsView as $divisionsVie){
-                echo "<option value=\"$divisionsVie->divisions_view_id\">" . $divisionsVie->name . '</option>';
-            }
-            ?>
-        </select>
-        </label>
+        <input type="text" name="name" placeholder="Название">
         <button>Добавить</button>
     </div>
 </form>

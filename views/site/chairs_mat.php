@@ -1,5 +1,9 @@
 <div class="nazad">
     <a href="<?= app()->route->getUrl('/divisions_view') ?>"><button>НАЗАД</button></a>
+    <div class="mat">
+        <a href="<?= app()->route->getUrl('/chairs') ?>"><button>КАФЕДРА ЭКОНОМИКИ</button></a></br>
+        <a href="<?= app()->route->getUrl('/chairs_tex') ?>"><button>КАФЕДРА ЭКОНОМИКИ</button></a>
+    </div>
 <div class="chair-ek">
     <h2>Кафедра математики </h2>
     <h3><?= $message ?? ''; ?></h3>

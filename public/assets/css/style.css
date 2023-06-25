@@ -38,7 +38,7 @@ header > nav > a{
     text-transform: uppercase;
     background-color: peachpuff;
     color: black;
-    font-size: 12px;
+    font-size: 11px;
     border: 1px solid black;
     border-radius: 10px;
     text-decoration: none;
@@ -387,6 +387,30 @@ header > nav > img{
     background-color: blanchedalmond;
 }
 
+.nazad > a > a > button{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 455px;
+    margin-top: 20px;
+}
+
+.nazad > a > a > button:hover{
+    background-color: blanchedalmond;
+}
+
+.mat > a > button{
+    width: 350px;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 455px;
+    margin-top: 20px;
+}
+
+.mat > a > button:hover{
+    background-color: blanchedalmond;
+}
+
 .poisk > img{
     background-position: 10px 12px;
     background-repeat: no-repeat;
@@ -406,3 +430,4 @@ header > nav > img{
     height: 30px;
     border-radius: 10px;
 }
+

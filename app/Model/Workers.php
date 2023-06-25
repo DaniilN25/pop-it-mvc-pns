@@ -16,7 +16,7 @@ class workers extends Model
         'name',
         'birthday',
         'division_id',
-        'room_id'
+        'roomID'
     ];
 
     protected $table = 'workers';

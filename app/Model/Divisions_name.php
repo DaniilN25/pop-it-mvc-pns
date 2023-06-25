@@ -12,7 +12,7 @@ class divisions_name extends Model
 
     public $timestamps = false;
     protected $fillable = [
-        'division_id',
+        'divisions_id',
         'division_view_id'
     ];
 
